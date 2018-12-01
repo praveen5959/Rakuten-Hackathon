@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/static/style.css" /> {% extends "layout.html" %}
+{% block content %}
+<section>
+  <div class="row">
+    <form
+      action="/analysis/?ticker=ticker"
+      methods=["POST","GET"]
+      enctype="multipart/form-data"
+      id="search"
+      class="search"
+    >
+      <div class="form-group">
+          
+          <div>
+              <input type="text" placeholder="Username" required="" id="username" name="username" />
+          </div>
+        
+
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="submit">
+              <i class="fa fa-search"></i>Search
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="wave"></div>
+</section>
+
+{% endblock %}
